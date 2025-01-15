@@ -30,10 +30,6 @@ quadratic_roots <- function(a, b, c) {
   root1 <- (-b + sqrt(discriminant)) / (2 * a)
   root2 <- (-b - sqrt(discriminant)) / (2 * a)
   
-  # Handle complex roots
-  root1[discriminant < 0] <- paste0(-b / (2 * a), " + ", sqrt(-discriminant) / (2 * a), "i")
-  root2[discriminant < 0] <- paste0(-b / (2 * a), " - ", sqrt(-discriminant) / (2 * a), "i")
-  
   return(c(root1, root2))
 }
 
